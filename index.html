@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RecovaCoach - サポート・規約</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --surface: #ffffff;
+    --border: #e4e0d6;
+    --ink: #1c1c1a;
+    --ink-muted: #6b6a63;
+    --accent: #7a8f3f;
+    --accent-soft: #eef2e2;
+    --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace;
+    --serif-jp: 'Zen Kaku Gothic New', 'Noto Sans JP', system-ui, sans-serif;
+    --body-jp: 'Noto Sans JP', system-ui, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17181a;
+      --surface: #202124;
+      --border: #33352f;
+      --ink: #ecece6;
+      --ink-muted: #9a9a92;
+      --accent: #a9c96a;
+      --accent-soft: #263320;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body-jp);
+    line-height: 1.85;
+    padding: 56px 20px 100px;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .masthead .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .masthead h1 {
+    font-family: var(--serif-jp);
+    font-size: 32px;
+    font-weight: 900;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .masthead p {
+    margin: 0;
+    color: var(--ink-muted);
+    font-size: 15px;
+    max-width: 56ch;
+  }
+
+  nav.jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav.jump a {
+    font-size: 13px;
+    color: var(--ink);
+    text-decoration: none;
+    background: var(--accent-soft);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+
+  nav.jump a:hover { opacity: 0.8; }
+
+  .doc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px 44px;
+    scroll-margin-top: 24px;
+  }
+
+  @media (max-width: 600px) {
+    .doc { padding: 28px 22px; }
+    body { padding: 40px 16px 80px; }
+  }
+
+  .doc h2 {
+    font-family: var(--serif-jp);
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+
+  .doc .doc-date {
+    font-size: 13px;
+    color: var(--ink-muted);
+    margin-bottom: 32px;
+    font-family: var(--mono);
+  }
+
+  .doc section { margin-top: 30px; }
+  .doc section:first-of-type { margin-top: 0; }
+
+  .doc h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .doc h3 .num {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .doc p { margin: 0 0 12px; font-size: 15px; max-width: 62ch; }
+  .doc ul { margin: 0 0 12px; padding-left: 1.3em; font-size: 15px; }
+  .doc li { margin-bottom: 6px; max-width: 60ch; }
+
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 16px;
+    font-size: 13.5px;
+  }
+
+  table.data-table th, table.data-table td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  table.data-table th {
+    color: var(--ink-muted);
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  .tag {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 560px) {
+    .feature-grid { grid-template-columns: 1fr; }
+  }
+
+  .feature-card {
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+
+  .feature-card h4 {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .feature-card p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--ink-muted);
+    max-width: none;
+  }
+
+  .contact-email {
+    font-family: var(--mono);
+    font-size: 15px;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--ink-muted);
+    padding-top: 8px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <span class="eyebrow">RecovaCoach</span>
+    <h1>サポート・プライバシーポリシー・利用規約</h1>
+    <p>RecovaCoachは、部位ごとの回復状況にもとづいて「今日、何を鍛えるべきか」を提案するトレーニング記録アプリです。</p>
+    <nav class="jump">
+      <a href="#about">アプリについて</a>
+      <a href="#privacy">プライバシーポリシー</a>
+      <a href="#terms">利用規約</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+
+  <!-- ============ アプリについて ============ -->
+  <div class="doc" id="about">
+    <h2>アプリについて</h2>
+    <section>
+      <p>RecovaCoachは、トレーニングの記録と、筋肉部位ごとの回復状況の管理を行うiOSアプリです。記録した種目・重量・回数から部位ごとの回復度合いを計算し、「今日はどこを鍛えるべきか」を提案します。</p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h4>回復トラッキング</h4>
+          <p>部位ごとの回復状況をもとに、今日のおすすめのトレーニングを提案します。</p>
+        </div>
+        <div class="feature-card">
+          <h4>トレーニング記録</h4>
+          <p>種目・重量・回数・セット数を記録し、自己ベストの更新を自動で検出します。</p>
+        </div>
+        <div class="feature-card">
+          <h4>メニュー機能</h4>
+          <p>よく使う種目の組み合わせを自動で検出し、次回からワンタップで記録を始められます。</p>
+        </div>
+        <div class="feature-card">
+          <h4>統計・履歴</h4>
+          <p>週ごとのボリューム推移や部位バランスを確認できます。</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ プライバシーポリシー ============ -->
+  <div class="doc" id="privacy">
+    <h2>プライバシーポリシー</h2>
+    <div class="doc-date">制定日：2026年9月2日</div>
+
+    <section>
+      <p>RecovaCoach(以下「本アプリ」)は、利用者のプライバシーを尊重し、以下の方針に基づいて情報を取り扱います。</p>
+    </section>
+
+    <section>
+      <h3><span class="num">1</span>収集する情報と保存先</h3>
+      <p>本アプリが取り扱う情報は次の通りです。</p>
+      <table class="data-table">
+        <tr><th>種類</th><th>内容</th><th>保存先・送信先</th></tr>
+        <tr>
+          <td>ユーザーが入力する情報</td>
+          <td>身長・体重・年齢・性別・筋肉量・体脂肪率、トレーニングの記録(種目・重量・回数・実施日など)</td>
+          <td><span class="tag">端末内のみ</span>外部送信なし</td>
+        </tr>
+        <tr>
+          <td>利用状況の分析データ</td>
+          <td>画面の表示状況・機能の利用状況(個人を特定しない形)</td>
+          <td>PostHog(外部の分析サービス)</td>
+        </tr>
+        <tr>
+          <td>購入情報</td>
+          <td>サブスクリプションの購入・解約状況</td>
+          <td>RevenueCat、Apple</td>
+        </tr>
+        <tr>
+          <td>通知</td>
+          <td>通知の許可状態</td>
+          <td>端末内</td>
+        </tr>
+      </table>
+      <p><strong>身長・体重・年齢・性別・筋肉量・体脂肪率、およびトレーニングの記録は、端末内にのみ保存され、外部のサーバーに送信されることはありません。</strong>利用状況の分析においても、氏名・メールアドレス、トレーニングの具体的な数値(重量・回数など)、種目名を送信することはありません。</p>
+    </section>
+
+    <section>
+      <h3><span class="num">2</span>第三者サービス</h3>
+      <p>本アプリは以下の第三者サービスを利用しています。各サービスのプライバシーポリシーもあわせてご確認ください。</p>
+      <ul>
+        <li>PostHog(利用状況の分析)</li>
+        <li>RevenueCat(サブスクリプション管理)</li>
+        <li>Apple(App Store決済・通知配信)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3><span class="num">3</span>広告・トラッキングについて</h3>
+      <p>本アプリは、広告の表示、および他社アプリを横断した利用者の追跡(トラッキング)を行っていません。</p>
+    </section>
+
+    <section>
+      <h3><span class="num">4</span>データの削除</h3>
+      <p>トレーニング記録を含む端末内のデータは、アプリ内の設定画面からいつでも削除できます。また、本アプリを端末から削除すると、端末内のデータもあわせて消去されます。</p>
+    </section>
+
+    <section>
+      <h3><span class="num">5</span>お問い合わせ</h3>
+      <p>本ポリシーに関するお問い合わせは、下記の「お問い合わせ」欄までご連絡ください。</p>
+    </section>
+
+    <section>
+      <h3><span class="num">6</span>ポリシーの変更</h3>
+      <p>本ポリシーの内容は、必要に応じて改定されることがあります。重要な変更がある場合は、アプリ内でお知らせします。</p>
+    </section>
+  </div>
+
+  <!-- ============ 利用規約 ============ -->
+  <div class="doc" id="terms">
+    <h2>利用規約</h2>
+    <div class="doc-date">制定日：2026年9月2日</div>
+
+    <section>
+      <p>この利用規約(以下「本規約」)は、RecovaCoach(以下「本アプリ」)の利用条件を定めるものです。本アプリをご利用いただく際は、本規約に同意いただいたものとみなします。</p>
+    </section>
+
+    <section>
+      <h3><span class="num">1</span>サービスの内容</h3>
+      <p>本アプリは、トレーニング記録の管理と、部位ごとの回復状況に基づいたトレーニング提案を行うツールです。基本機能は無料でご利用いただけます。</p>
+    </section>
+
+    <section>
+      <h3><span class="num">2</span>Proプランについて</h3>
+      <ul>
+        <li>価格・課金期間は、App Store上の購入画面に表示される内容が適用されます</li>
+        <li>サブスクリプションは自動更新されます。更新を停止する場合は、次回更新日の24時間前までにお手続きください</li>
+        <li><strong>解約は端末の「設定」アプリ内のApple ID管理画面から行ってください。本アプリ内から解約することはできません</strong></li>
+        <li>返金についてはAppleの規定に従います。本アプリの運営者では返金対応を行うことができません</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3><span class="num">3</span>免責事項</h3>
+      <p>本アプリが提示する回復時間の目安やトレーニングの提案は、<strong>一般的な情報の提供を目的としたものであり、医学的な助言ではありません。</strong></p>
+      <ul>
+        <li>実際のトレーニングは、利用者ご自身の判断と責任において行ってください</li>
+        <li>本アプリの利用により生じた傷害、体調不良、その他の損害について、運営者は責任を負いません</li>
+        <li>持病がある方、体調に不安がある方は、トレーニングを開始する前に医師にご相談ください</li>
+        <li>本アプリが提示する内容の正確性を保証するものではありません</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3><span class="num">4</span>禁止事項</h3>
+      <p>以下の行為を禁止します。</p>
+      <ul>
+        <li>本アプリの複製、改変、リバースエンジニアリング</li>
+        <li>本アプリの運営を妨げる行為</li>
+        <li>法令に違反する行為</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3><span class="num">5</span>規約の変更</h3>
+      <p>本規約の内容は、必要に応じて改定されることがあります。重要な変更がある場合は、アプリ内でお知らせします。</p>
+    </section>
+
+    <section>
+      <h3><span class="num">6</span>準拠法</h3>
+      <p>本規約は日本法に準拠します。</p>
+    </section>
+  </div>
+
+  <!-- ============ お問い合わせ ============ -->
+  <div class="doc" id="contact">
+    <h2>お問い合わせ</h2>
+    <section>
+      <p>本アプリに関するお問い合わせは、以下のメールアドレスまでご連絡ください。</p>
+      <p class="contact-email">recovacoach.support@gmail.com</p>
+    </section>
+  </div>
+
+  <footer>© 2026 RecovaCoach</footer>
+</div>
+</body>
+</html>
