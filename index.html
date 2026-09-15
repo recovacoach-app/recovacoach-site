@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RecovaCoach - サポート・規約</title>
+<link rel="alternate" hreflang="ja" href="https://recovacoach-app.github.io/recovacoach-site/">
+<link rel="alternate" hreflang="en" href="https://recovacoach-app.github.io/recovacoach-site/en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -59,6 +61,25 @@
     padding-bottom: 28px;
     border-bottom: 1px solid var(--border);
   }
+
+  .masthead-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .lang-switch {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-muted);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 2px 12px;
+  }
+
+  .lang-switch:hover { color: var(--ink); }
 
   .masthead .eyebrow {
     font-family: var(--mono);
@@ -230,7 +251,10 @@
 <div class="wrap">
 
   <div class="masthead">
-    <span class="eyebrow">RecovaCoach</span>
+    <div class="masthead-top">
+      <span class="eyebrow">RecovaCoach</span>
+      <a class="lang-switch" href="en/" hreflang="en" lang="en">English</a>
+    </div>
     <h1>サポート・プライバシーポリシー・利用規約</h1>
     <p>RecovaCoachは、部位ごとの回復状況にもとづいて「今日、何を鍛えるべきか」を提案するトレーニング記録アプリです。</p>
     <nav class="jump">
